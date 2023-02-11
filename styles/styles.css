@@ -1,0 +1,77 @@
+:root{
+    --Big700 : 'Big Shoulders Display', cursive;
+    --Lexend400: 'Lexend Deca', sans-serif;
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+body{
+    Font-size: 15px;
+}
+h2{
+    font-family: var(--Big700);
+    color: var(--Very-light-gray-background-headings-buttons);
+    font-size: 2.5rem;
+}
+p{
+    font-family: var(--Lexend400);
+    color: var(--Transparent-white-paragraphs);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+button{
+    all: unset;
+    background-color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.3rem;
+}
+.container{
+    height: 100vh;
+    padding: 1.5rem;
+    background-color: var(--Transparent-white-paragraphs);
+}
+.info{
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card{padding: 2.5rem;}
+.card__p{margin-bottom: 2rem;}
+.card--sedans{background-color: var(--Bright-orange);}
+.card--suvs{background-color: var(--Dark-cyan);}
+.card--luxury{background-color: var(--Very-dark-cyan);}
+.card__button{margin: .5rem 0;}
+.card__button--sedans{color: var(--Bright-orange);}
+.card__button--suvs{color: var(--Dark-cyan) ;}
+.card__button--luxury{color: var(--Very-dark-cyan);}
+
+@media (min-width: 768px){
+    button{
+        margin-top: 5rem;
+        border: 3px solid transparent; 
+    }
+    button:hover{
+        background-color: transparent;
+        border: 3px solid white; 
+        color: var(--Transparent-white-paragraphs);
+    }
+    .container{
+        display: grid;
+        place-content: center;
+        padding: 0;
+    }
+    .info{
+        display: flex;
+        width: 64rem;
+    }
+    .card{
+        max-width: 20rem;
+        padding: 3.3rem;
+    }
+    .card__icon{margin-top: 1rem;}
+    .card__button{margin: 0;}
+}
